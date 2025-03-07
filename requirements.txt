@@ -1,0 +1,5 @@
+streamlit
+pandas
+random
+time
+streamlit_gsheets
