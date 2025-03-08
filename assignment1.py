@@ -2,8 +2,9 @@ import streamlit as st
 import pandas as pd
 import random
 import time
+from streamlit_gsheets import GSheetsConnection
 
-conn = st.connection("gsheets", type="gsheets")
+conn = st.connection("gsheets", type=GSheetsConnection)
 df = pd.DataFrame(conn.read(spreadsheet="https://docs.google.com/spreadsheets/d/1htXnIS8wTOsiSak3NhHYQR1tK-KPNLrW5xkkGrsyyI8/edit?usp=sharing"))
 
 st.title("What is the relationship between mpg and horsepower?")
